@@ -1,3 +1,5 @@
+> set_option serial on
+
 > check_tx 0x00
 -> code: OK
 
