@@ -36,7 +36,7 @@ message Request {
     RequestLoadSnapshotChunk  load_snapshot_chunk  = 14;
     RequestApplySnapshotChunk apply_snapshot_chunk = 15;
   }
-  Reserve = 4;
+  reserved = 4;
 }
 
 message RequestEcho {
@@ -139,7 +139,7 @@ message Response {
     ResponseLoadSnapshotChunk  load_snapshot_chunk  = 15;
     ResponseApplySnapshotChunk apply_snapshot_chunk = 16;
   }
-  Reserve = 5;
+  reserved = 5;
 }
 
 // nondeterministic
