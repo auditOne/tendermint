@@ -139,7 +139,7 @@ message Response {
     ResponseLoadSnapshotChunk  load_snapshot_chunk  = 15;
     ResponseApplySnapshotChunk apply_snapshot_chunk = 16;
   }
-  reserved = 5; // was setOption
+  reserved = 5;  // was setOption
 }
 
 // nondeterministic
