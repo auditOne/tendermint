@@ -38,6 +38,7 @@ Available Commands:
   help        Help about any command
   info        Get some info about the application
   query       Query the application state
+  set_option  Set an options on the application
 
 Flags:
       --abci string      socket or grpc (default "socket")
@@ -261,6 +262,8 @@ integer, starting at 0.
 
 If `serial=off`, there are no restrictions on transactions.
 
+We can toggle the value of `serial` using the `set_option` ABCI message.
+
 When `serial=on`, some transactions are invalid. In a live blockchain,
 transactions collect in memory before they are committed into blocks. To
 avoid wasting resources on invalid transactions, ABCI provides the
@@ -281,6 +284,7 @@ abci-cli counter
 In another window, start the `abci-cli console`:
 
 ```sh
+> set_option serial on
 > check_tx 0x00
 -> code: OK
 
